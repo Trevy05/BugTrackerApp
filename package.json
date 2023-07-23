@@ -54,5 +54,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  }
+  },
+  "homepage": "https://<username>.github.io/<repository-name>"
 }
