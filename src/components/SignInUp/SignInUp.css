@@ -1,0 +1,158 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #222;
+  --neobrutal-base-color: #fd841f;
+  --neobrutal-accent-color-one: #e14d2a;
+  --neobrutal-accent-color-two: #cd104d;
+  --neobrutal-accent-color-three: #9c2c77;
+}
+
+.background-container {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("/Users/Trevon/Projects/bugtracker_mern/client/src/assets/layered-waves-haikei.png");
+  background-size: cover;
+  display: flex;
+}
+
+.sign-in-up-container {
+  width: 400px;
+  padding: 40px;
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+  border: 4px solid black;
+  border-radius: 5px;
+  text-align: center;
+  max-height: 100%;
+  margin: auto;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.title a {
+  color: black;
+  font-size: 3em;
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.title form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.sign-in-up-form-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.sign-in-up-form-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  color: #222;
+}
+
+.sign-in-up-form-container input:focus {
+  border: 1px solid var(--neobrutal-accent-color-one);
+}
+
+.form-error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-image: linear-gradient(
+    to right,
+    var(--neobrutal-accent-color-three) 0%,
+    var(--neobrutal-accent-color-two) 51%,
+    var(--neobrutal-accent-color-one) 100%
+  );
+  text-align: center;
+  font-weight: bolder;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  margin: 0.5em auto;
+}
+
+button[type="submit"]:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.signup-form,
+.signin-form {
+  margin-top: 20px;
+}
+
+.signup-form p,
+.signin-form p {
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.signin-form button,
+.signup-form button {
+  background-image: linear-gradient(
+    to right,
+    var(--neobrutal-base-color) 0%,
+    var(--neobrutal-accent-color-one) 51%,
+    var(--neobrutal-accent-color-two) 100%
+  );
+  text-align: center;
+  font-weight: bolder;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+
+  border-radius: 10px;
+  display: block;
+}
+
+.signin-form button:hover,
+.signup-form button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+  .sign-in-up-container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-height: 400px) {
+  .background-container {
+    height: 100%;
+  }
+}

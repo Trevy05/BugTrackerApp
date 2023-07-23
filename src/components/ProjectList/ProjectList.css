@@ -1,0 +1,89 @@
+.projects {
+  margin: 1em;
+}
+
+.projects h1 {
+  font-weight: 700;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.action-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 2px solid black;
+  z-index: 0;
+}
+
+.action-buttons button {
+  margin: 0 1em;
+}
+
+.delete-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon {
+  color: black;
+}
+
+@media screen and (min-width: 1440px) {
+  .project-list {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project-list {
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .action-buttons {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .action-buttons {
+    font-size: 0.4em;
+  }
+
+  .project-list {
+    height: 68vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .action-buttons {
+    font-size: 0.4em;
+  }
+
+  .project-list {
+    height: 64vh;
+  }
+}

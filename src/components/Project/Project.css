@@ -1,0 +1,163 @@
+.Card {
+  display: inline-block;
+  position: relative;
+  margin: 1rem;
+  background-color: #ffffff;
+  border: 2px solid #1f1f1f;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+  height: 450px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+}
+
+.Card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Card-details {
+  padding: 1rem;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+}
+
+.Card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1f1f1f;
+}
+
+.Card-description {
+  margin: 0;
+  color: #1f1f1f;
+}
+
+.Card-list {
+  margin: 1rem 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Card-list li {
+  margin-right: 1rem;
+  color: #1f1f1f;
+}
+
+.Card-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #1f1f1f;
+}
+
+.Card-links a {
+  text-decoration: none;
+  color: #1f1f1f;
+  padding: 0.5rem 1rem;
+  border: 2px solid #1f1f1f;
+  transition: all 0.3s ease-in-out;
+}
+
+.Card-links a:hover {
+  transform: translate(-4px, 4px);
+  box-shadow: 4px -4px 0 #000;
+}
+
+.neobrutalist-checkbox {
+  position: absolute;
+  left: 0.5em;
+  color: #ffffff;
+}
+
+.neobrutalist-checkbox label {
+  margin-bottom: 1em;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 1024px) {
+  .Card {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Card {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Card {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .Card-details {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .Card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .Card-description {
+    margin-bottom: 0.5rem;
+  }
+
+  .Card-list li {
+    margin-right: 0.5rem;
+  }
+
+  .Card-links {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .Card-links a {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .Card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 375px) {
+  .Card {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Card {
+    width: 75%;
+  }
+}

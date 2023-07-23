@@ -1,0 +1,68 @@
+.user {
+  margin: 1em;
+}
+
+.userlist {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.modal h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal input[type="text"],
+.modal textarea {
+  border: none;
+  background-color: #9da3ae;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+}
+
+.modal input[type="submit"] {
+  background-color: #f77f00;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal input[type="submit"]:hover {
+  background-color: #d62828;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  .userlist {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

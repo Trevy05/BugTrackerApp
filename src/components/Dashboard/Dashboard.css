@@ -1,0 +1,171 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: x-large;
+  text-align: end;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.issue-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.issue-summary .max-w-lg {
+  width: 30%;
+  border: 2px solid #000;
+}
+
+.ticket-activity {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.open-tickets,
+.recent-activity {
+  flex: 1;
+  margin: 0.5em;
+  border: 2px solid #000;
+  border-radius: 0.5em;
+  max-height: 50vh;
+}
+
+.open-tickets .open-ticket-summary,
+.recent-activity .recent-activity-summary {
+  padding: 1.5rem;
+}
+
+.open-tickets h2,
+.recent-activity h2 {
+  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.open-tickets ul,
+.recent-activity ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.open-tickets li,
+.recent-activity li {
+  border-bottom: 1px solid #000;
+  padding: 1rem 0;
+}
+
+.open-tickets li:last-child,
+.recent-activity li:last-child {
+  border-bottom: none;
+}
+
+.open-tickets p,
+.recent-activity p {
+  margin: 0;
+  color: #000;
+}
+
+/* Hover effect */
+.open-tickets li:hover,
+.recent-activity li:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.open-tickets li:hover p,
+.recent-activity li:hover p {
+  color: #fff;
+}
+
+.ticket-list {
+  overflow-y: scroll;
+  height: 40vh;
+}
+
+.recent-activity {
+  position: relative;
+}
+
+.recent-activity h2 {
+  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recent-activity-summary ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-activity-summary li {
+  border-bottom: 1px solid #000;
+  padding: 1rem 0;
+}
+
+.recent-activity-summary li:last-child {
+  border-bottom: none;
+}
+
+.recent-activity-summary p {
+  margin: 0;
+  color: #000;
+}
+
+/* Hover effect */
+.recent-activity-summary li:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.recent-activity-summary li:hover p {
+  color: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 700px) {
+  .issue-summary {
+    overflow-y: hidden;
+    height: 40vh;
+  }
+
+  .ticket-activity {
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 40vh;
+  }
+
+  .issue-summary .max-w-lg {
+    width: 70%;
+    margin: 1em;
+  }
+
+  .ticket-list {
+    height: 10vh;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 300px) {
+}

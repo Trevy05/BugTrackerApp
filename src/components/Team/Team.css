@@ -1,0 +1,173 @@
+.team-card {
+  background-color: #fff;
+  padding: 20px;
+  border: 4px solid #000;
+  border-radius: 0;
+  font-family: Arial, sans-serif;
+  box-shadow: 8px 8px 0 #000;
+  margin: 1em;
+  max-width: 80vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.team-card h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.team-name {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.team-card-header .neobrutalist-checkbox {
+  margin-right: 10px;
+}
+
+.team-card-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.close-icon {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.team-card-header i {
+  margin-left: auto;
+  font-size: 24px;
+}
+
+.team-members {
+  margin-top: 20px;
+  padding-left: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.team-member img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.team-member-details h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.team-member-details p {
+  margin: 0;
+  color: #000;
+}
+
+.team-member-details .team-member-status {
+  font-weight: bold;
+}
+
+.team-member-details .active {
+  color: green;
+}
+
+.team-member-details .inactive {
+  color: red;
+}
+
+.neobrutalist-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.neobrutalist-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.neobrutalist-checkbox input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.neobrutalist-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.neobrutalist-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 700px) {
+  .team-card {
+    width: 90vw;
+    flex-direction: column;
+    height: 10vh;
+  }
+
+  .team-name {
+    font-size: 0.8em;
+  }
+
+  .team-card.expanded {
+    order: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 300px) {
+}

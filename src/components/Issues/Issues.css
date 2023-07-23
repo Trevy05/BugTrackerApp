@@ -1,0 +1,220 @@
+.issues-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 98%;
+  margin: 1em;
+  height: 100vh;
+}
+
+.issues-container h1 {
+  font-weight: 700;
+}
+
+.filter-sort-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0.8em 0;
+}
+
+.filter,
+.sort,
+.search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+select,
+input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #000;
+  transition: border-color 0.3s ease;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000000%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M2%205.5l4%204%204-4%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+select:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #000;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #999;
+}
+
+input[type="text"]::-moz-placeholder {
+  color: #999;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  color: #999;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+.search input {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: none;
+  border-bottom: 2px solid #d4d4d4;
+  margin-left: 10px;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--neobrutal-accent-color-three);
+}
+
+.issues-list {
+  width: 100%;
+  /* add styles for issues list here */
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+.issues-list > div {
+  padding: 20px;
+}
+
+.issues-list > div:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.issues-list > div > h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  /* add styles for issue title here */
+}
+
+.issues-list > div > p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 10px;
+  /* add styles for issue description here */
+}
+
+.control-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-top: 2px solid black;
+}
+
+.control-buttons button {
+  margin: 0 1em;
+}
+
+@media screen and (max-width: 1080px) {
+  .filter-sort-search {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    font-size: 14px;
+    justify-content: center;
+    margin-bottom: 0.3em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #1b2224;
+  }
+
+  .issues-container {
+    padding: 0;
+    margin: 0.5em;
+    height: 98%;
+  }
+
+  .issues-list {
+    height: 65vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .control-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter select,
+  .sort select,
+  .search input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .issues-container {
+    padding: 0;
+    margin: 0.5em;
+  }
+
+  .filter select,
+  .sort select,
+  .search input {
+    font-size: 12px;
+  }
+
+  .issues-list {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .issues-container {
+    padding: 0;
+  }
+
+  .issues-list {
+    height: 55vh;
+  }
+}
+
+.close-icon {
+  color: black;
+}
+
+@media screen and (max-width: 375px) {
+  .control-buttons {
+    font-size: 0.9em;
+  }
+}
