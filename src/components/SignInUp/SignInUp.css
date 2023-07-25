@@ -11,7 +11,7 @@
   width: 100vw;
   height: 100vh;
 
-  background-image: url("/Users/Trevon/Projects/bugtracker_mern/client/src/assets/layered-waves-haikei.png");
+  background-image: url("../../assets/layered-waves-haikei.png");
   background-size: cover;
   display: flex;
 }
