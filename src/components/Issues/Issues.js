@@ -28,6 +28,7 @@ const Issues = () => {
 
   useEffect(() => {
     const fetchBugs = async () => {
+      setTicketData([]);
       try {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["currentuser"] = user;
