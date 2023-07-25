@@ -126,7 +126,7 @@ const Dashboard = () => {
     const fetchActivity = async () => {
       try {
         const res = await axios.get(
-          "https://bug-tracker-av8h.onrender.com/activity/"
+          "https://bug-tracker-av8h.onrender.com/activities/"
         );
 
         setActivityData(res.data);

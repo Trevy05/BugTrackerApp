@@ -174,6 +174,16 @@
   transform: rotate(45deg);
 }
 
+@media screen and (max-width: 500px) {
+  .ticket {
+    font-size: 0.7rem;
+  }
+
+  .ticket-header {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .ticket {
     max-width: 220px;

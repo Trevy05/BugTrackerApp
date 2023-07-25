@@ -103,7 +103,7 @@ input[type="text"]:-ms-input-placeholder {
   width: 100%;
   /* add styles for issues list here */
   overflow-y: scroll;
-  height: 75vh;
+  height: 65vh;
 }
 
 .issues-list > div {
@@ -164,7 +164,7 @@ input[type="text"]:-ms-input-placeholder {
   }
 
   .issues-list {
-    height: 65vh;
+    height: 60vh;
   }
 }
 
@@ -192,11 +192,11 @@ input[type="text"]:-ms-input-placeholder {
   .filter select,
   .sort select,
   .search input {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .issues-list {
-    height: 60vh;
+    height: 50vh;
   }
 }
 

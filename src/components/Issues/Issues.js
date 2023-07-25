@@ -84,7 +84,7 @@ const Issues = () => {
     };
 
     fetchProjects();
-  }, []);
+  }, [projects]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
