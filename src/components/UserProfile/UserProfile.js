@@ -16,7 +16,7 @@ const UserProfile = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/users/${userId}`
+          `https://bug-tracker-av8h.onrender.com/users/${userId}`
         ); // Replace with your API endpoint to fetch user data
         setUser(response.data);
       } catch (error) {

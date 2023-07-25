@@ -37,10 +37,13 @@ const TeamList = () => {
 
     try {
       const currentUser = JSON.parse(localStorage.getItem("currentUser")).id;
-      const res = await axios.patch(`http://localhost:8000/teams/${editID}`, {
-        formData,
-        currentUser,
-      });
+      const res = await axios.patch(
+        `https://bug-tracker-av8h.onrender.com/teams/${editID}`,
+        {
+          formData,
+          currentUser,
+        }
+      );
       setShowEditModal(false);
     } catch (err) {
       console.error(err);
@@ -59,7 +62,7 @@ const TeamList = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/teams/",
+        "https://bug-tracker-av8h.onrender.com/teams/",
         updatedFormData
       );
       setShowModal(false);
@@ -74,7 +77,9 @@ const TeamList = () => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["Authorization"] = user;
 
-        const res = await axios.get("http://localhost:8000/teams/");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/teams/"
+        );
         setTeamsData(res.data);
       } catch (err) {
         console.error(err);
@@ -101,7 +106,7 @@ const TeamList = () => {
     try {
       await Promise.all(
         selectedTeams.map((teamId) =>
-          axios.delete(`http://localhost:8000/teams/${teamId}`)
+          axios.delete(`https://bug-tracker-av8h.onrender.com/teams/${teamId}`)
         )
       );
       setSelectedTeams([]);

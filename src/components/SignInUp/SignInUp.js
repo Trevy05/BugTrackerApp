@@ -34,13 +34,16 @@ function SignInUp({ handleAuthentication }) {
 
       // Call sign up API endpoint
       try {
-        const response = await fetch("http://localhost:8000/auth/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username, email, password }),
-        });
+        const response = await fetch(
+          "https://bug-tracker-av8h.onrender.com/auth/register",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username, email, password }),
+          }
+        );
 
         if (!response.ok) {
           const errorData = await response.json();
@@ -61,13 +64,16 @@ function SignInUp({ handleAuthentication }) {
 
       // Call sign in API endpoint
       try {
-        const response = await fetch("http://localhost:8000/auth/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        });
+        const response = await fetch(
+          "https://bug-tracker-av8h.onrender.com/auth/login",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+          }
+        );
 
         if (!response.ok) {
           const errorData = await response.json();

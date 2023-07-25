@@ -9,7 +9,7 @@ const Invitations = ({ currentUser }) => {
     const fetchInvitations = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/invitations/requests/${currentUser.id}`
+          `https://bug-tracker-av8h.onrender.com/invitations/requests/${currentUser.id}`
         );
         setInvitations(res.data);
       } catch (err) {
@@ -22,7 +22,7 @@ const Invitations = ({ currentUser }) => {
   const handleAccept = async (invitationId) => {
     try {
       const res = await axios.patch(
-        `http://localhost:8000/invitations/requests/${invitationId}/accept`
+        `https://bug-tracker-av8h.onrender.com/invitations/requests/${invitationId}/accept`
       );
       setInvitations([]);
     } catch (err) {
@@ -33,7 +33,7 @@ const Invitations = ({ currentUser }) => {
   const handleDecline = async (invitationId) => {
     try {
       const res = await axios.patch(
-        `http://localhost:8000/invitations/requests/${invitationId}/reject/`
+        `https://bug-tracker-av8h.onrender.com/invitations/requests/${invitationId}/reject/`
       );
       setInvitations([]);
       // Do something on successful decline

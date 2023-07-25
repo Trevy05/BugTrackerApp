@@ -70,6 +70,11 @@
   margin-right: 10px;
 }
 
+.member-info {
+  display: flex;
+  align-items: center;
+}
+
 .team-member-details h3 {
   margin: 0;
   font-size: 18px;

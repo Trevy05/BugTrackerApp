@@ -11,7 +11,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
-  max-width: 300px;
+  max-width: fit-content;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: var(--neobrutal-base-color);
   background-image: linear-gradient(
@@ -57,7 +57,19 @@
   padding: 5px;
 }
 
+@media screen and (max-width: 800px) {
+  .user-profile-container {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 500px) {
+  .user-profile-container {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
   .user-profile-container {
     justify-content: center;
   }

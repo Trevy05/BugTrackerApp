@@ -21,7 +21,7 @@ const UserList = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8000/invitations/requests",
+        "https://bug-tracker-av8h.onrender.com/invitations/requests",
         {
           sender,
           recipient,
@@ -46,7 +46,9 @@ const UserList = () => {
       const currentUserId = JSON.parse(localStorage.getItem("currentUser")).id;
 
       try {
-        const res = await axios.get("http://localhost:8000/users/");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/users/"
+        );
         // Filter the user data array to remove the current user
         const filteredUsers = res.data.filter(
           (user) => user._id !== currentUserId
@@ -63,11 +65,14 @@ const UserList = () => {
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/teams/", {
-          headers: {
-            authorization: sender,
-          },
-        });
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/teams/",
+          {
+            headers: {
+              authorization: sender,
+            },
+          }
+        );
         setTeamsData(res.data);
       } catch (err) {
         console.error(err);

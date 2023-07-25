@@ -32,7 +32,9 @@ const Issues = () => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["currentuser"] = user;
 
-        const res = await axios.get("http://localhost:8000/bugs");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/bugs"
+        );
         setTicketData(res.data);
       } catch (err) {
         console.error(err);
@@ -54,7 +56,9 @@ const Issues = () => {
     try {
       await Promise.all(
         selectedBugs.map((bugId) =>
-          axios.delete(`http://localhost:8000/bugs/delete/${bugId}`)
+          axios.delete(
+            `https://bug-tracker-av8h.onrender.com/bugs/delete/${bugId}`
+          )
         )
       );
       setSelectedBugs([]);
@@ -69,7 +73,9 @@ const Issues = () => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["currentUser"] = user;
 
-        const res = await axios.get("http://localhost:8000/projects/");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/projects/"
+        );
         setProjects(res.data);
       } catch (err) {
         console.error(err);
@@ -98,10 +104,13 @@ const Issues = () => {
   const handleEdit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:8000/bugs/${editID}`, {
-        ...formData,
-        project: projectEdit,
-      });
+      const res = await axios.put(
+        `https://bug-tracker-av8h.onrender.com/bugs/${editID}`,
+        {
+          ...formData,
+          project: projectEdit,
+        }
+      );
       setShowEditModal(false);
     } catch (err) {
       console.error(err);
@@ -111,7 +120,10 @@ const Issues = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/bugs", formData);
+      const res = await axios.post(
+        "https://bug-tracker-av8h.onrender.com/bugs",
+        formData
+      );
 
       setShowModal(false);
     } catch (err) {

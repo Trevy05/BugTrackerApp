@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://trevy05.github.io/BugTrackerApp/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -54,6 +55,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  },
-  "homepage": "https://trevy05.github.io/BugTrackerApp/"
+  }
 }

@@ -10,7 +10,9 @@ const Team = ({ teamName, onSelection, showDelete, id }) => {
   // Function to fetch users data
   const fetchUsers = useCallback(async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/teams/${id}/members`);
+      const res = await axios.get(
+        `https://bug-tracker-av8h.onrender.com/teams/${id}/members`
+      );
 
       setAdminsData(res.data.admins);
       setMembersData(res.data.members);
@@ -37,7 +39,7 @@ const Team = ({ teamName, onSelection, showDelete, id }) => {
       axios.defaults.headers.common["Authorization"] = user;
 
       const res = await axios.delete(
-        `http://localhost:8000/teams/${id}/members/${memberId}`
+        `https://bug-tracker-av8h.onrender.com/teams/${id}/members/${memberId}`
       );
 
       if (res.status === 200) {
@@ -86,12 +88,14 @@ const Team = ({ teamName, onSelection, showDelete, id }) => {
             <h2 className="modal-heading">{teamName}</h2>
             {adminsData.map((admin) => (
               <li className="team-member" key={admin.id}>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png"
-                  alt={admin.username}
-                />
-                <div className="team-member-details">
-                  <h3>{admin.username}</h3>
+                <div className="member-info">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png"
+                    alt={admin.username}
+                  />
+                  <div className="team-member-details">
+                    <h3>{admin.username}</h3>
+                  </div>
                 </div>
               </li>
             ))}
@@ -102,20 +106,23 @@ const Team = ({ teamName, onSelection, showDelete, id }) => {
               ) : (
                 membersData.map((member) => (
                   <li className="team-member" key={member._id}>
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png"
-                      alt={member.name}
-                    />
-                    <div className="team-member-details">
-                      <h3>{member.name}</h3>
-                      <button
-                        onClick={() => {
-                          handleDelete(member._id);
-                        }}
-                      >
-                        Delete
-                      </button>
+                    <div className="member-info">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/768px-Windows_10_Default_Profile_Picture.svg.png"
+                        alt={member.username}
+                      />
+                      <div className="team-member-details">
+                        <h3>{member.username}</h3>
+                      </div>
                     </div>
+
+                    <button
+                      onClick={() => {
+                        handleDelete(member._id);
+                      }}
+                    >
+                      Leave
+                    </button>
                   </li>
                 ))
               )}

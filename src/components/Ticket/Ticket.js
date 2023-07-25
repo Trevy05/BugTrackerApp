@@ -15,7 +15,9 @@ const Ticket = (props) => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["Authorization"] = user;
 
-        const res = await axios.get("http://localhost:8000/projects/");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/projects/"
+        );
 
         const filteredProjects = res.data.filter(
           (project) => user._id == props.project

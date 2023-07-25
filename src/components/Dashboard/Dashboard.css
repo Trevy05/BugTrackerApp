@@ -66,8 +66,16 @@ h1 {
 
 .open-tickets li,
 .recent-activity li {
-  border-bottom: 1px solid #000;
+  border-color: #000;
+  border-width: 3px;
+  border-left: 1px;
+  border-right: 1px;
   padding: 1rem 0;
+}
+
+.open-tickets li:first-child,
+.recent-activity li:first-child {
+  border-top-width: 0.5em;
 }
 
 .open-tickets li:last-child,
@@ -84,13 +92,13 @@ h1 {
 /* Hover effect */
 .open-tickets li:hover,
 .recent-activity li:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--neobrutal-accent-color-one);
+  color: var(--neobrutal-accent-color-three);
 }
 
 .open-tickets li:hover p,
 .recent-activity li:hover p {
-  color: #fff;
+  color: black;
 }
 
 .ticket-list {

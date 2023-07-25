@@ -17,7 +17,9 @@ const Dashboard = () => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["currentuser"] = user;
 
-        const res = await axios.get("http://localhost:8000/bugs");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/bugs"
+        );
         setTicketData(res.data);
       } catch (err) {
         console.error(err);
@@ -123,7 +125,9 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchActivity = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/activity");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/activity"
+        );
 
         setActivityData(res.data);
       } catch (err) {

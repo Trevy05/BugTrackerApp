@@ -28,7 +28,9 @@ const ProjectList = () => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["Authorization"] = user;
 
-        const res = await axios.get("http://localhost:8000/projects/");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/projects/"
+        );
         setProjectsData(res.data);
       } catch (err) {
         console.error(err);
@@ -55,7 +57,9 @@ const ProjectList = () => {
     try {
       await Promise.all(
         selectedProjects.map((projectId) =>
-          axios.delete(`http://localhost:8000/projects/delete/${projectId}`)
+          axios.delete(
+            `https://bug-tracker-av8h.onrender.com/projects/delete/${projectId}`
+          )
         )
       );
       setSelectedProjects([]);
@@ -70,7 +74,9 @@ const ProjectList = () => {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["Authorization"] = user;
 
-        const res = await axios.get("http://localhost:8000/teams/");
+        const res = await axios.get(
+          "https://bug-tracker-av8h.onrender.com/teams/"
+        );
         setTeams(res.data);
       } catch (err) {
         console.error(err);
@@ -97,7 +103,7 @@ const ProjectList = () => {
     event.preventDefault();
     try {
       const res = await axios.patch(
-        `http://localhost:8000/projects/${editID}`,
+        `https://bug-tracker-av8h.onrender.com/projects/${editID}`,
         formData
       );
       setShowEditModal(false);
@@ -109,7 +115,10 @@ const ProjectList = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/projects/", formData);
+      const res = await axios.post(
+        "https://bug-tracker-av8h.onrender.com/projects/",
+        formData
+      );
       setShowModal(false);
     } catch (err) {
       console.error(err);
