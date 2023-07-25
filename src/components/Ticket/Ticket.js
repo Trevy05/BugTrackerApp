@@ -19,9 +19,6 @@ const Ticket = (props) => {
           "https://bug-tracker-av8h.onrender.com/projects/"
         );
 
-        const filteredProjects = res.data.filter(
-          (project) => user._id == props.project
-        );
         setProjectData(res.data);
       } catch (err) {
         console.error(err);
@@ -29,7 +26,6 @@ const Ticket = (props) => {
     };
 
     fetchProjects();
-    console.log(projectData);
   }, []);
 
   const handleClick = () => {

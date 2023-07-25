@@ -37,7 +37,7 @@ const TeamList = () => {
 
     try {
       const currentUser = JSON.parse(localStorage.getItem("currentUser")).id;
-      const res = await axios.patch(
+      await axios.patch(
         `https://bug-tracker-av8h.onrender.com/teams/${editID}`,
         {
           formData,
@@ -61,7 +61,7 @@ const TeamList = () => {
     };
 
     try {
-      const res = await axios.post(
+      await axios.post(
         "https://bug-tracker-av8h.onrender.com/teams/",
         updatedFormData
       );

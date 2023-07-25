@@ -20,7 +20,7 @@ const UserList = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
+      await axios.post(
         "https://bug-tracker-av8h.onrender.com/invitations/requests",
         {
           sender,

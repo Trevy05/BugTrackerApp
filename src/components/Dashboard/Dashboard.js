@@ -35,11 +35,11 @@ const Dashboard = () => {
 
     ticketData.map((ticket) => {
       if (ticket.status === "Open") {
-        open += 1;
+        return (open += 1);
       } else if (ticket.status === "In Progress") {
-        inProgress += 1;
+        return (inProgress += 1);
       } else {
-        closed += 1;
+        return (closed += 1);
       }
     });
 
@@ -58,13 +58,13 @@ const Dashboard = () => {
 
     ticketData.map((ticket) => {
       if (ticket.priority === "Severe") {
-        severe += 1;
+        return (severe += 1);
       } else if (ticket.priority === "High") {
-        high += 1;
+        return (high += 1);
       } else if (ticket.priority === "Medium") {
-        medium += 1;
+        return (medium += 1);
       } else {
-        low += 1;
+        return (low += 1);
       }
     });
 
@@ -87,19 +87,19 @@ const Dashboard = () => {
 
     ticketData.map((ticket) => {
       if (ticket.type === "Enhancement") {
-        enhancement += 1;
+        return (enhancement += 1);
       } else if (ticket.type === "Feature") {
-        feature += 1;
+        return (feature += 1);
       } else if (ticket.type === "Design") {
-        design += 1;
+        return (design += 1);
       } else if (ticket.type === "Security") {
-        security += 1;
+        return (security += 1);
       } else if (ticket.type === "Documentation") {
-        documentation += 1;
+        return (documentation += 1);
       } else if (ticket.type === "Maintenance") {
-        maintenance += 1;
+        return (maintenance += 1);
       } else {
-        support += 1;
+        return (support += 1);
       }
     });
 
@@ -117,8 +117,10 @@ const Dashboard = () => {
   useEffect(() => {
     setOpenTicketsData([]);
     ticketData.map((ticket) => {
-      if (ticket.status === "Open")
+      if (ticket.status === "Open") {
         setOpenTicketsData((prevOpenTickets) => [...prevOpenTickets, ticket]);
+      }
+      return null;
     });
   }, [ticketData]);
 
@@ -136,7 +138,7 @@ const Dashboard = () => {
       }
     };
     fetchActivity();
-  }, [ticketData]);
+  }, [activityData]);
 
   return (
     <div className="dashboard-container">

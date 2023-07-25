@@ -14,7 +14,7 @@ function SignInUp({ handleAuthentication }) {
 
   useEffect(() => {
     checkAuthentication();
-  }, []);
+  });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -119,6 +119,7 @@ function SignInUp({ handleAuthentication }) {
             <img
               src={"https://cdn-icons-png.flaticon.com/128/3097/3097849.png"}
               id="logo"
+              alt="pro"
             ></img>
           </div>
           <h2>{isSignUp ? "Sign Up" : "Sign In"}</h2>

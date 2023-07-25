@@ -21,7 +21,7 @@ const Invitations = ({ currentUser }) => {
 
   const handleAccept = async (invitationId) => {
     try {
-      const res = await axios.patch(
+      await axios.patch(
         `https://bug-tracker-av8h.onrender.com/invitations/requests/${invitationId}/accept`
       );
       setInvitations([]);
@@ -32,7 +32,7 @@ const Invitations = ({ currentUser }) => {
 
   const handleDecline = async (invitationId) => {
     try {
-      const res = await axios.patch(
+      await axios.patch(
         `https://bug-tracker-av8h.onrender.com/invitations/requests/${invitationId}/reject/`
       );
       setInvitations([]);

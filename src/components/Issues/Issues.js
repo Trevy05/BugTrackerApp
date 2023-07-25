@@ -105,13 +105,10 @@ const Issues = () => {
   const handleEdit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.put(
-        `https://bug-tracker-av8h.onrender.com/bugs/${editID}`,
-        {
-          ...formData,
-          project: projectEdit,
-        }
-      );
+      await axios.put(`https://bug-tracker-av8h.onrender.com/bugs/${editID}`, {
+        ...formData,
+        project: projectEdit,
+      });
       setShowEditModal(false);
     } catch (err) {
       console.error(err);
@@ -121,10 +118,7 @@ const Issues = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post(
-        "https://bug-tracker-av8h.onrender.com/bugs",
-        formData
-      );
+      await axios.post("https://bug-tracker-av8h.onrender.com/bugs", formData);
 
       setShowModal(false);
     } catch (err) {

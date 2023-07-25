@@ -16,7 +16,6 @@ import "animate.css";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 

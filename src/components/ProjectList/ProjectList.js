@@ -102,7 +102,7 @@ const ProjectList = () => {
   const handleEdit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.patch(
+      await axios.patch(
         `https://bug-tracker-av8h.onrender.com/projects/${editID}`,
         formData
       );
@@ -115,7 +115,7 @@ const ProjectList = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post(
+      await axios.post(
         "https://bug-tracker-av8h.onrender.com/projects/",
         formData
       );

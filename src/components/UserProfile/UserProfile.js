@@ -4,12 +4,10 @@ import "./UserProfile.css";
 
 const UserProfile = () => {
   const [user, setUser] = useState(null);
-  const [userId, setUserId] = useState(
-    JSON.parse(localStorage.getItem("currentUser")).id
-  );
-  const [profilePicture, setProfilePicture] = useState(
-    "https://cdn-icons-png.flaticon.com/512/2102/2102633.png"
-  );
+  const userId = JSON.parse(localStorage.getItem("currentUser")).id;
+
+  const profilePicture =
+    "https://cdn-icons-png.flaticon.com/512/2102/2102633.png";
 
   // Fetch the user data from the backend
   useEffect(() => {
