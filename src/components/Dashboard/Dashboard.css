@@ -89,18 +89,6 @@ h1 {
   color: #000;
 }
 
-/* Hover effect */
-.open-tickets li:hover,
-.recent-activity li:hover {
-  background-color: var(--neobrutal-accent-color-one);
-  color: var(--neobrutal-accent-color-three);
-}
-
-.open-tickets li:hover p,
-.recent-activity li:hover p {
-  color: black;
-}
-
 .ticket-list {
   overflow-y: scroll;
   height: 40vh;

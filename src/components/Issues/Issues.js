@@ -13,7 +13,7 @@ const Issues = () => {
   const [showDelete, setShowDelete] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  const [projects, setProjects] = useState({});
+  const [projects, setProjects] = useState([]);
   const [projectEdit, setProjectEdit] = useState("");
   const [editID, setEditId] = useState("");
   const [formData, setFormData] = useState({
@@ -28,13 +28,12 @@ const Issues = () => {
 
   useEffect(() => {
     const fetchBugs = async () => {
-      setTicketData([]);
       try {
         const user = JSON.parse(localStorage.getItem("currentUser")).id;
         axios.defaults.headers.common["currentuser"] = user;
 
         const res = await axios.get(
-          "https://bug-tracker-av8h.onrender.com/bugs"
+          "https://bug-tracker-av8h.onrender.com/bugs/"
         );
         setTicketData(res.data);
       } catch (err) {
@@ -77,6 +76,7 @@ const Issues = () => {
         const res = await axios.get(
           "https://bug-tracker-av8h.onrender.com/projects/"
         );
+        console.log(res.data);
         setProjects(res.data);
       } catch (err) {
         console.error(err);
@@ -84,7 +84,7 @@ const Issues = () => {
     };
 
     fetchProjects();
-  }, [projects]);
+  }, []);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;

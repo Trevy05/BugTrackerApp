@@ -126,10 +126,11 @@ const Dashboard = () => {
     const fetchActivity = async () => {
       try {
         const res = await axios.get(
-          "https://bug-tracker-av8h.onrender.com/activity"
+          "https://bug-tracker-av8h.onrender.com/activity/"
         );
 
         setActivityData(res.data);
+        console.log(activityData);
       } catch (err) {
         console.error(err);
       }
@@ -181,9 +182,15 @@ const Dashboard = () => {
                 <ul>
                   {openTicketsData.map((ticket) => (
                     <li>
-                      <p>Title: {ticket.title}</p>
-                      <p>Description: {ticket.description}</p>
-                      <p>Priority: {ticket.priority}</p>
+                      <p>
+                        <b>Title:</b> {ticket.title}
+                      </p>
+                      <p>
+                        <b>Description:</b> {ticket.description}
+                      </p>
+                      <p>
+                        <b>Priority:</b> {ticket.priority}
+                      </p>
                     </li>
                   ))}
                 </ul>
