@@ -7,7 +7,8 @@
 
 h1 {
   font-size: x-large;
-  text-align: end;
+  text-align: center;
+  color: #000;
 }
 
 .dashboard {
@@ -16,6 +17,11 @@ h1 {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.dashboard h1 {
+  text-align: end;
+  font-weight: 600;
 }
 
 .issue-summary {

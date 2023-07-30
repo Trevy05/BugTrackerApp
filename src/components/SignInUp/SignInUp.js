@@ -115,7 +115,7 @@ function SignInUp({ handleAuthentication }) {
       <div className="sign-in-up-container">
         <div className="sign-in-up-form-container">
           <div className="title">
-            <a href="#Home">Bug Tracker</a>
+            <h1 href="#Home">Bug Tracker</h1>
             <img
               src={"https://cdn-icons-png.flaticon.com/128/3097/3097849.png"}
               id="logo"

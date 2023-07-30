@@ -8,7 +8,8 @@
 }
 
 .issues-container h1 {
-  font-weight: 700;
+  text-align: end;
+  font-weight: 600;
 }
 
 .filter-sort-search {
@@ -158,7 +159,7 @@ input[type="text"]:-ms-input-placeholder {
   }
 
   .issues-container {
-    padding: 0;
+    padding: 1rem;
     margin: 0.5em;
     height: 98%;
   }
@@ -185,7 +186,7 @@ input[type="text"]:-ms-input-placeholder {
 
 @media screen and (max-width: 425px) {
   .issues-container {
-    padding: 0;
+    padding: 1rem;
     margin: 0.5em;
   }
 
@@ -202,7 +203,7 @@ input[type="text"]:-ms-input-placeholder {
 
 @media screen and (max-width: 375px) {
   .issues-container {
-    padding: 0;
+    padding: 1rem;
   }
 
   .issues-list {

@@ -132,7 +132,6 @@ const Dashboard = () => {
         );
 
         setActivityData(res.data);
-        console.log(activityData);
       } catch (err) {
         console.error(err);
       }

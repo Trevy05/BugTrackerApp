@@ -3,7 +3,8 @@
 }
 
 .projects h1 {
-  font-weight: 700;
+  text-align: end;
+  font-weight: 600;
 }
 
 .project-list {

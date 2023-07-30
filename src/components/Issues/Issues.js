@@ -76,7 +76,6 @@ const Issues = () => {
         const res = await axios.get(
           "https://bug-tracker-av8h.onrender.com/projects/"
         );
-        console.log(res.data);
         setProjects(res.data);
       } catch (err) {
         console.error(err);
