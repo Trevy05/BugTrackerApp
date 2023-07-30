@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router Router basename="/">
       <div className="App">
         {!isAuthenticated && (
           <SignInUp handleAuthentication={handleAuthentication} />
