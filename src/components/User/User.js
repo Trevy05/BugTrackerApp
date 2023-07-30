@@ -12,7 +12,7 @@ const User = ({ name, email, avatar, bio, handleInvite, userInfo }) => {
         <p>{email}</p>
         <p>{bio}</p>
       </div>
-      <button onClick={() => handleInvite(userInfo)}>Invite to Team</button>
+      <button onClick={() => handleInvite(userInfo)}>Invite</button>
     </div>
   );
 };
